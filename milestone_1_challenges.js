@@ -39,6 +39,23 @@ function calculateBMI(weight, height) {
   else return `Your BMI is ${BMI} - Obese`;
 }
 
+// Challenge 8: Greeting Based on Time
+function greetUser(name, hour) {
+  let greeting = "";
+  if (hour >= 5 && hour <= 11) {
+    greeting = "Good morning";
+  } else if (hour >= 12 && hour <= 17) {
+    greeting = "Good afternoon";
+  } else if (hour >= 18 && hour <= 21) {
+    greeting = "Good evening";
+  } else if ((hour >= 22 && hour <= 23) || (hour >= 0 && hour <= 4)) {
+    greeting = "Good night";
+  } else {
+    return "Invalid hour Value";
+  }
+  return `${greeting}, ${name}!`;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
