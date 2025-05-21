@@ -133,7 +133,7 @@ function sumMultiples(n, divisor) {
 }
 
 // Challenge 15: Sum of Digits
-    // Approach 1: no inbuilt functions
+// Approach 1: no inbuilt functions
 function sumDigits(num) {
   if (num < 0) num *= -1;
   let remainingNum = num,
@@ -143,6 +143,19 @@ function sumDigits(num) {
     sum += currentNum;
     remainingNum -= currentNum;
     remainingNum /= 10;
+  }
+  return sum;
+}
+
+// Approach 2: using inbuilt Math.trunc() function
+function sumOfDigits(num) {
+  if (num < 0) num *= -1;
+  let remainingNum = num,
+    sum = 0;
+  while (remainingNum > 0) {
+    let currentNum = remainingNum % 10;
+    sum += currentNum;
+    remainingNum = Math.trunc((remainingNum /= 10));
   }
   return sum;
 }
@@ -223,3 +236,10 @@ console.log(sumDigits(123)); // 6
 console.log(sumDigits(-123)); // 6
 console.log(sumDigits(764));
 console.log(sumDigits(302)); // 5
+
+console.log("Test to get the sum of Digits in a number (Math.trunc())");
+console.log(sumOfDigits(123)); // 6
+console.log(sumOfDigits(-123)); // 6
+console.log(sumOfDigits(764)); // 17
+console.log(sumOfDigits(302)); // 5
+console.log(sumOfDigits(310)); // 4
