@@ -82,6 +82,17 @@ function perimeter(shape, len) {
   return `Invalid Shape input`;
 }
 
+// Challenge 11: Sum of Even Numbers
+function sumEvenNumbers(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    if (i % 2 == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -130,3 +141,8 @@ console.log(
 console.log(perimeter("c", 4)); // 25.142857142857142
 console.log(perimeter("r", 8)); // 'Invalid Shape input'
 console.log(perimeter("s", 9)); // 36
+
+console.log("Test for Finding Sum of Even Numbers in range 1 - n");
+console.log(sumEvenNumbers(7)); // 12
+console.log(sumEvenNumbers(2)); // 2
+console.log(sumEvenNumbers(21)); // 110
