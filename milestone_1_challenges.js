@@ -121,6 +121,17 @@ function factorial(num) {
   return result;
 }
 
+// Challenge 14: Multiple Sum
+function sumMultiples(n, divisor) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % divisor === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -184,3 +195,8 @@ console.log("Test for Finding Factorial of a number");
 console.log(factorial(0)); // 1
 console.log(factorial(-2)); // 'Negative integers not Allowed!!'
 console.log(factorial(5)); //120
+
+console.log("Test for summing Multiples of number");
+console.log(sumMultiples(10, 2)); // 30
+console.log(sumMultiples(15, 3)); // 45
+console.log(sumMultiples(7, 5)); // 5
