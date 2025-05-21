@@ -93,6 +93,18 @@ function sumEvenNumbers(num) {
   return sum;
 }
 
+// Challenge 12: Multiply by Itself
+function powerUp(num, times) {
+  if (times === 0 || num === 0) {
+    num = 1;
+  }
+  while (times > 1) {
+    num *= num;
+    times--;
+  }
+  return num;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -146,3 +158,8 @@ console.log("Test for Finding Sum of Even Numbers in range 1 - n");
 console.log(sumEvenNumbers(7)); // 12
 console.log(sumEvenNumbers(2)); // 2
 console.log(sumEvenNumbers(21)); // 110
+
+console.log("Test for Multiplying n  by Itself for 'times' times");
+console.log(powerUp(3, 2)); // 9
+console.log(powerUp(0));
+console.log(powerUp(6, 2));
