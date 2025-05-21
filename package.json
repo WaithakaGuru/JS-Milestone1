@@ -1,0 +1,12 @@
+{
+  "name": "js-coding-milestone",
+  "version": "1.0.0",
+  "description": "## What this repo entails",
+  "main": "milestone_1_challenges.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC"
+}
