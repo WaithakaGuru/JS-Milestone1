@@ -17,6 +17,12 @@ function findRectanglePerimeter(length, width) {
   return 2 * (length + width);
 }
 
+// Challenge 4: Check Negative
+function isNegative(num) {
+  //  Check whether num is a number
+  if (typeof num === "number") return num < 0;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -33,3 +39,8 @@ console.log(findRectanglePerimeter(3, 5)); // 16
 console.log(findRectanglePerimeter(45, "y")); // NaN
 console.log(findRectanglePerimeter(-2, 3)); //  "length/width of a shape cannot be negative"
 console.log(findRectanglePerimeter(3, 0)); // "length/width of a shape cannot be negative"
+
+console.log("Test for checking if a number is negative");
+console.log(isNegative(8)); // false
+console.log(isNegative(-3)); // true
+console.log(isNegative("")); // undefined
