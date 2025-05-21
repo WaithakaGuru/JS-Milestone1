@@ -23,6 +23,24 @@ function isNegative(num) {
   if (typeof num === "number") return num < 0;
 }
 
+// Challenge 5: Can Drive
+function canDrive(name, age) {
+  if (age >= 18) return `${name} is old enough to drive`;
+  return `${name} is not old enough to drive`;
+}
+
+// Challenge 6: Largest Number among Three numbers
+function findLargest(num1, num2, num3) {
+  let largest = num1;
+  if (num2 > largest) {
+    largest = num2;
+  }
+  if (num3 > largest) {
+    largest = num3;
+  }
+  return largest;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -44,3 +62,16 @@ console.log("Test for checking if a number is negative");
 console.log(isNegative(8)); // false
 console.log(isNegative(-3)); // true
 console.log(isNegative("")); // undefined
+
+console.log("Test for checking whether User can Drive based on age");
+console.log(canDrive("Mwas", 34)); // Mwas is old enough to drive
+console.log(canDrive("John", 18)); // 'John is old enough to drive'
+console.log(canDrive("Elian", 17)); // 'Elian is not old enough to drive'
+
+console.log("Test for Finging Largest number among three numbers");
+console.log(findLargest(12, 45, 7)); // 45
+console.log(findLargest(-10, -6, -3)); // -3
+console.log(findLargest(10, 4, 10)); // 10
+console.log(findLargest(7, 7, 7)); // 7
+console.log(findLargest(67, 34, 18)); // 67
+console.log(findLargest(23, 45, 45)); // 45
