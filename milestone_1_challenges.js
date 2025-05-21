@@ -71,6 +71,17 @@ function FizzBuzzCheck(num) {
   return result;
 }
 
+// Challenge 10: Perimeter 2
+function perimeter(shape, len) {
+  if (shape === "s") {
+    return len * 4;
+  }
+  if (shape === "c") {
+    return (22 / 7) * len * 2;
+  }
+  return `Invalid Shape input`;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -112,3 +123,10 @@ console.log(FizzBuzzCheck(6)); // Fizz
 console.log(FizzBuzzCheck(20)); // Buzz
 console.log(FizzBuzzCheck(30)); // FizzBuzz
 console.log(FizzBuzzCheck(8)); // '8'
+
+console.log(
+  "Test for Finding Perimeter based on shape (Circle - 'c' / Square - 's'",
+);
+console.log(perimeter("c", 4)); // 25.142857142857142
+console.log(perimeter("r", 8)); // 'Invalid Shape input'
+console.log(perimeter("s", 9)); // 36
