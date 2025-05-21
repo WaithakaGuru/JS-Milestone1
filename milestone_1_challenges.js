@@ -25,7 +25,7 @@ function isNegative(num) {
 
 // Challenge 5: Can Drive
 function canDrive(name, age) {
-  if (age >= 18) return `${name} is old enough to drive`;
+  if (age >= 18) return `${name} is old enough to drive.`;
   return `${name} is not old enough to drive`;
 }
 
