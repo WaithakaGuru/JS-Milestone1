@@ -56,6 +56,21 @@ function greetUser(name, hour) {
   return `${greeting}, ${name}!`;
 }
 
+// Challenge 9: FizzBuzz
+function FizzBuzzCheck(num) {
+  let result = "";
+  if (num % 3 === 0 && num % 5 === 0) {
+    result = "FizzBuzz";
+  } else if (num % 3 === 0) {
+    result = "Fizz";
+  } else if (num % 5 === 0) {
+    result = "Buzz";
+  } else {
+    result = `${num}`;
+  }
+  return result;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -86,3 +101,14 @@ console.log(canDrive("Elian", 17)); // 'Elian is not old enough to drive'
 console.log("Test for calculating BMI value");
 console.log(calculateBMI(68, 1.75)); // 'Your BMI is 22.2 - Normal weight'
 console.log(calculateBMI(56, 1.46)); // 'Your BMI is 26.2 - Overweight'
+
+console.log("Test for Greeting User based Hour of the day");
+console.log(greetUser("Waithaka", 25)); //'Invalid hour Value'
+console.log(greetUser("John", 23)); // 'Good night, John!'
+console.log(greetUser("Jane", 18)); // 'Good evening, Jane!'
+
+console.log("Test for FizzBuzz");
+console.log(FizzBuzzCheck(6)); // Fizz
+console.log(FizzBuzzCheck(20)); // Buzz
+console.log(FizzBuzzCheck(30)); // FizzBuzz
+console.log(FizzBuzzCheck(8)); // '8'
