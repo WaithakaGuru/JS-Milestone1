@@ -105,6 +105,22 @@ function powerUp(num, times) {
   return num;
 }
 
+// Challenge 13: Factorial Calculator
+function factorial(num) {
+  if (num < 0) {
+    return "Negative integers not Allowed!!";
+  }
+  if (num === 0) {
+    return 1;
+  }
+
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -163,3 +179,8 @@ console.log("Test for Multiplying n  by Itself for 'times' times");
 console.log(powerUp(3, 2)); // 9
 console.log(powerUp(0));
 console.log(powerUp(6, 2));
+
+console.log("Test for Finding Factorial of a number");
+console.log(factorial(0)); // 1
+console.log(factorial(-2)); // 'Negative integers not Allowed!!'
+console.log(factorial(5)); //120
