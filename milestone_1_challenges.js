@@ -106,9 +106,12 @@ console.log("Test for Greeting User based Hour of the day");
 console.log(greetUser("Waithaka", 25)); //'Invalid hour Value'
 console.log(greetUser("John", 23)); // 'Good night, John!'
 console.log(greetUser("Jane", 18)); // 'Good evening, Jane!'
+<<<<<<< HEAD
 
 console.log("Test for FizzBuzz");
 console.log(FizzBuzzCheck(6)); // Fizz
 console.log(FizzBuzzCheck(20)); // Buzz
 console.log(FizzBuzzCheck(30)); // FizzBuzz
 console.log(FizzBuzzCheck(8)); // '8'
+=======
+>>>>>>> 030dab65b543fad7b634812124dc002917bec8e7
