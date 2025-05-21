@@ -29,6 +29,16 @@ function canDrive(name, age) {
   return `${name} is not old enough to drive`;
 }
 
+// Challenge 7: BMI Calculator
+function calculateBMI(weight, height) {
+  const BMI = Math.trunc((weight / (height * height)) * 10) / 10;
+
+  if (BMI < 18.5) return `Your BMI is ${BMI} - Underweight`;
+  if (BMI >= 18.5 && BMI < 25) return `Your BMI is ${BMI} - Normal weight`;
+  if (BMI >= 25 && BMI < 30) return `Your BMI is ${BMI} - Overweight`;
+  else return `Your BMI is ${BMI} - Obese`;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -55,3 +65,7 @@ console.log("Test for checking whether User can Drive based on age");
 console.log(canDrive("Mwas", 34)); // Mwas is old enough to drive
 console.log(canDrive("John", 18)); // 'John is old enough to drive'
 console.log(canDrive("Elian", 17)); // 'Elian is not old enough to drive'
+
+console.log("Test for calculating BMI value");
+console.log(calculateBMI(68, 1.75)); // 'Your BMI is 22.2 - Normal weight'
+console.log(calculateBMI(56, 1.46)); // 'Your BMI is 26.2 - Overweight'
