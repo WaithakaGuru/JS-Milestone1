@@ -132,6 +132,21 @@ function sumMultiples(n, divisor) {
   return sum;
 }
 
+// Challenge 15: Sum of Digits
+    // Approach 1: no inbuilt functions
+function sumDigits(num) {
+  if (num < 0) num *= -1;
+  let remainingNum = num,
+    sum = 0;
+  while (remainingNum > 0) {
+    let currentNum = remainingNum % 10;
+    sum += currentNum;
+    remainingNum -= currentNum;
+    remainingNum /= 10;
+  }
+  return sum;
+}
+
 /* Test Area */
 console.log("Test for addition of Two Numbers");
 console.log(addition(-3, 7)); // 4
@@ -200,3 +215,11 @@ console.log("Test for summing Multiples of number");
 console.log(sumMultiples(10, 2)); // 30
 console.log(sumMultiples(15, 3)); // 45
 console.log(sumMultiples(7, 5)); // 5
+
+console.log(
+  "Test to get the sum of Digits in a number ( no inbuilt functions)",
+);
+console.log(sumDigits(123)); // 6
+console.log(sumDigits(-123)); // 6
+console.log(sumDigits(764));
+console.log(sumDigits(302)); // 5
