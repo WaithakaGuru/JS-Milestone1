@@ -110,6 +110,18 @@ function linearSearch(arr, target) {
   return -1;
 }
 
+
+// challenge 12: Reverse Linear Search
+function reverseLinearSearch(arr, target) {
+  let idx;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      idx = i;
+    }
+  }
+  return idx ? idx : -1;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -173,6 +185,12 @@ console.log(
 console.log(findAvg([2, 3, 4, 6, 7, 5])); // 4.5
 console.log(findAvg([])); // 0
 
-console.log("\n     Test to perform a Linear Search");
+console.log("\n  Test to perform a Linear Search");
 console.log(linearSearch([5, 3, 7, 1, 4], 7)); // 2
 console.log(linearSearch([5, 3, 7, 1, 4], 10)); // -1
+
+console.log(
+  "\n  Test to perform Reverse Linear Search (return the index of the last occurrence of the target)"
+);
+console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)); // 5
+console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // -1
