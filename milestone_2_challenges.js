@@ -150,6 +150,21 @@ function removeDuplicates(arr) {
   return Object.values(cleanArr);
 }
 
+// Challenge 16: Most Frequent 
+function mostFrequent(arr){
+    let frequencyObj = {};
+    for(let i = 0; i<arr.length; i++){
+        if(!frequencyObj[arr[i]]) frequencyObj[arr[i]] = 1;
+        else frequencyObj[arr[i]] += 1;
+    }
+    let mostFrequent = Object.keys(frequencyObj)[0];
+    for(const key of Object.keys(frequencyObj)){
+        if(frequencyObj[key] > mostFrequent) mostFrequent = key;
+    }
+    return isNaN(mostFrequent) ? mostFrequent : parseFloat(mostFrequent);
+}
+
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -238,3 +253,7 @@ console.log(
   "\n  Test for Removing Duplicate values in an array & return Non-Duplicate array"
 );
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // [ 1, 2, 3, 4, 5 ]
+
+console.log("\n  Testing for Finding the most frequent item in an Array");
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4])); // 3
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"])); // apple
