@@ -102,6 +102,14 @@ function findAvg(numArray) {
   return sum / numArray.length;
 }
 
+// challenge 11: Linear Search
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) return i;
+  }
+  return -1;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -164,3 +172,7 @@ console.log(
 );
 console.log(findAvg([2, 3, 4, 6, 7, 5])); // 4.5
 console.log(findAvg([])); // 0
+
+console.log("\n     Test to perform a Linear Search");
+console.log(linearSearch([5, 3, 7, 1, 4], 7)); // 2
+console.log(linearSearch([5, 3, 7, 1, 4], 10)); // -1
