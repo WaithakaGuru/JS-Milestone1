@@ -28,6 +28,15 @@ function findWinner(objArray) {
   return winner;
 }
 
+// Challenge 4: Longest word
+function findLongestWord(wordArray) {
+  let longestWord = wordArray[0];
+  for (let i = 1; i < wordArray.length; i++) {
+    if (wordArray[i].length > longestWord.length) longestWord = wordArray[i];
+  }
+  return longestWord;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -43,3 +52,13 @@ console.log(findMax([-45, -56, -1, -2])); // -1
 console.log(
   "\n  Test for [findWinner]: Finding the Object with the Highest value in an array of objects"
 );
+const candidates = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Kim", votes: 75 },
+  { name: "Charlie", votes: 65 },
+];
+console.log(findWinner(candidates)); //[{ name: 'Bob', votes: 75 }, { name: "Kim", votes: 75 }] 
+
+console.log("\n  Test to: Find the Longest Word in an array of Strings");
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // grapefruit
