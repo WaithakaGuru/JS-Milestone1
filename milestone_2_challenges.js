@@ -131,6 +131,16 @@ function linearSearchAll(arr, target) {
   return foundAt;
 }
 
+// Challenge 14: Count Occurrences - counts number of times an items appears in an array
+function countOccurrences(stringArray) {
+  let count = {};
+  for (let i = 0; i < stringArray.length; i++) {
+    if (count[stringArray[i]]) count[stringArray[i]] += 1;
+    else count[stringArray[i]] = 1;
+  }
+  return count;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -209,3 +219,8 @@ console.log(
 );
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7)); // [2, 5]
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10)); // []
+
+console.log("\n  Test for Counting all Occurences of each array-item");
+console.log(
+  countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"])
+);
