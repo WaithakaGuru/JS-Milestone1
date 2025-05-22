@@ -52,6 +52,10 @@ function filterByLength(stringArray, minLength) {
   return results;
 }
 
+    // Approach Two (inbuilt filter method)
+const filterByLen = (stringArray, minLength) =>
+  stringArray.filter((word) => word.length >= minLength);
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -84,3 +88,8 @@ console.log(countObjProps({ name: "Alice", age: 25, city: "Paris" })); // 3
 console.log("\n  Test for: Filtering words by their length [for loop]");
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", 
     "elephant"], 5)); // [ 'giraffe', 'hippo', 'elephant' ]
+    
+console.log(
+  "\n  Test for filtering words by their length [inbuilt filter() method]"
+);
+console.log(filterByLen(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // [ 'giraffe', 'hippo', 'elephant' ]
