@@ -56,6 +56,15 @@ function filterByLength(stringArray, minLength) {
 const filterByLen = (stringArray, minLength) =>
   stringArray.filter((word) => word.length >= minLength);
 
+// Challenge 7: Sum of Even Numbers
+function sumEvenNumbers(numArray) {
+  let sum = 0;
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] % 2 === 0) sum += numArray[i];
+  }
+  return sum;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -93,3 +102,8 @@ console.log(
   "\n  Test for filtering words by their length [inbuilt filter() method]"
 );
 console.log(filterByLen(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // [ 'giraffe', 'hippo', 'elephant' ]
+
+console.log(
+  "\n  Test for: finding Sum of Even Numbers in an Array of numbers"
+);
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // 12
