@@ -85,6 +85,13 @@ function countTruthy(obj) {
   return truthyCount;
 }
 
+// Challenge 10: Average of Numbers
+    // Approach One (using reduce() func)
+function getAvg(numArray) {
+  if (numArray.length === 0) return 0;
+  return numArray.reduce((a, b) => a + b) / numArray.length;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -129,9 +136,15 @@ console.log(
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // 12
 
 console.log(
-  "\n     Test to find: Difference Between Sum of Even and Odd Numbers in an array of numbers"
+  "\n  Test to find: Difference Between Sum of Even and Odd Numbers in an array of numbers"
 );
 console.log(diffEvenOdd([1, 2, 3, 4, 5, 6])); // 3
 
 console.log("\n     Test for: Counting the Truthy values in an Array");
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // 2
+
+console.log(
+  "\n  Test for: Finding Average of array-values in a numberArray [inbuilt reduce() method]"
+);
+console.log(getAvg([2, 3, 4, 6, 7, 5])); // 4.5
+console.log(getAvg([])); // 0
