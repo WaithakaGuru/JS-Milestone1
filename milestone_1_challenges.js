@@ -167,77 +167,77 @@ console.log(addition(-2, -23)); // -25
 console.log(addition(45, 81)); // 126
 console.log(addition(4, "r")); //arguments must be of type 'number'
 
-console.log("Test for Minutes to Seconds conversion");
+console.log("\nTest for Minutes to Seconds conversion");
 console.log(convert(90)); // 5400
 console.log(convert(60)); // 3600
 
-console.log("Test for Finding Perimeter of a Rectangle");
+console.log("\nTest for Finding Perimeter of a Rectangle");
 console.log(findRectanglePerimeter(3, 5)); // 16
 console.log(findRectanglePerimeter(45, "y")); // NaN
 console.log(findRectanglePerimeter(-2, 3)); //  "length/width of a shape cannot be negative"
 console.log(findRectanglePerimeter(3, 0)); // "length/width of a shape cannot be negative"
 
-console.log("Test for checking if a number is negative");
+console.log("\nTest for checking if a number is negative");
 console.log(isNegative(8)); // false
 console.log(isNegative(-3)); // true
 console.log(isNegative("")); // undefined
 
-console.log("Test for checking whether User can Drive based on age");
+console.log("\nTest for checking whether User can Drive based on age");
 console.log(canDrive("Mwas", 34)); // Mwas is old enough to drive
 console.log(canDrive("John", 18)); // 'John is old enough to drive'
 console.log(canDrive("Elian", 17)); // 'Elian is not old enough to drive'
 
-console.log("Test for calculating BMI value");
+console.log("\nTest for calculating BMI value");
 console.log(calculateBMI(68, 1.75)); // 'Your BMI is 22.2 - Normal weight'
 console.log(calculateBMI(56, 1.46)); // 'Your BMI is 26.2 - Overweight'
 
-console.log("Test for Greeting User based Hour of the day");
+console.log("\nTest for Greeting User based Hour of the day");
 console.log(greetUser("Waithaka", 25)); //'Invalid hour Value'
 console.log(greetUser("John", 23)); // 'Good night, John!'
 console.log(greetUser("Jane", 18)); // 'Good evening, Jane!'
 
-console.log("Test for FizzBuzz");
+console.log("\nTest for FizzBuzz");
 console.log(FizzBuzzCheck(6)); // Fizz
 console.log(FizzBuzzCheck(20)); // Buzz
 console.log(FizzBuzzCheck(30)); // FizzBuzz
 console.log(FizzBuzzCheck(8)); // '8'
 
 console.log(
-  "Test for Finding Perimeter based on shape (Circle - 'c' / Square - 's'",
+  "\nTest for Finding Perimeter based on shape (Circle - 'c' / Square - 's'",
 );
 console.log(perimeter("c", 4)); // 25.142857142857142
 console.log(perimeter("r", 8)); // 'Invalid Shape input'
 console.log(perimeter("s", 9)); // 36
 
-console.log("Test for Finding Sum of Even Numbers in range 1 - n");
+console.log("\nTest for Finding Sum of Even Numbers in range 1 - n");
 console.log(sumEvenNumbers(7)); // 12
 console.log(sumEvenNumbers(2)); // 2
 console.log(sumEvenNumbers(21)); // 110
 
-console.log("Test for Multiplying n  by Itself for 'times' times");
+console.log("\nTest for Multiplying n  by Itself for 'times' times");
 console.log(powerUp(3, 2)); // 9
 console.log(powerUp(0));
 console.log(powerUp(6, 2));
 
-console.log("Test for Finding Factorial of a number");
+console.log("\nTest for Finding Factorial of a number");
 console.log(factorial(0)); // 1
 console.log(factorial(-2)); // 'Negative integers not Allowed!!'
 console.log(factorial(5)); //120
 
-console.log("Test for summing Multiples of number");
+console.log("\nTest for summing Multiples of number");
 console.log(sumMultiples(10, 2)); // 30
 console.log(sumMultiples(15, 3)); // 45
 console.log(sumMultiples(7, 5)); // 5
 
 console.log(
-  "Test to get the sum of Digits in a number ( no inbuilt functions)",
+  "\nTest to get the sum of Digits in a number ( no inbuilt functions)",
 );
 console.log(sumDigits(123)); // 6
 console.log(sumDigits(-123)); // 6
 console.log(sumDigits(764));
 console.log(sumDigits(302)); // 5
 
-console.log("Test to get the sum of Digits in a number (Math.trunc())");
+console.log("\nTest to get the sum of Digits in a number (Math.trunc())");
 console.log(sumOfDigits(123)); // 6
 console.log(sumOfDigits(-123)); // 6
 console.log(sumOfDigits(764)); // 17
