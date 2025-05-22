@@ -65,6 +65,17 @@ function sumEvenNumbers(numArray) {
   return sum;
 }
 
+// Challenge 8:  Difference Between Sum of Even and Odd Numbers
+function diffEvenOdd(numArray) {
+  let sumEven = 0,
+    sumOdd = 0;
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] % 2 === 0) sumEven += numArray[i];
+    else sumOdd += numArray[i];
+  }
+  return sumEven - sumOdd;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -107,3 +118,8 @@ console.log(
   "\n  Test for: finding Sum of Even Numbers in an Array of numbers"
 );
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // 12
+
+console.log(
+  "\n     Test to find: Difference Between Sum of Even and Odd Numbers in an array of numbers"
+);
+console.log(diffEvenOdd([1, 2, 3, 4, 5, 6])); // 3
