@@ -164,7 +164,6 @@ function mostFrequent(arr){
     return isNaN(mostFrequent) ? mostFrequent : parseFloat(mostFrequent);
 }
 
-
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
