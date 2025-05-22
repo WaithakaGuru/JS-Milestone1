@@ -141,6 +141,15 @@ function countOccurrences(stringArray) {
   return count;
 }
 
+// Challenge 15: Remove Duplicates
+function removeDuplicates(arr) {
+  let cleanArr = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (!cleanArr[arr[i]]) cleanArr[arr[i]] = arr[i];
+  }
+  return Object.values(cleanArr);
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -224,3 +233,8 @@ console.log("\n  Test for Counting all Occurences of each array-item");
 console.log(
   countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"])
 );
+
+console.log(
+  "\n  Test for Removing Duplicate values in an array & return Non-Duplicate array"
+);
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // [ 1, 2, 3, 4, 5 ]
