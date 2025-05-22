@@ -42,6 +42,16 @@ function countObjProps(obj) {
   return Object.keys(obj).length;
 }
 
+// Challenge 6: Filter by Length
+    // Approach One (for loop)
+function filterByLength(stringArray, minLength) {
+  let results = [];
+  for (let i = 0; i < stringArray.length; i++) {
+    if (stringArray[i].length >= minLength) results.push(stringArray[i]);
+  }
+  return results;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -70,3 +80,7 @@ console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // grap
 
 console.log("\n  Test for: Counting Properties in an object");
 console.log(countObjProps({ name: "Alice", age: 25, city: "Paris" })); // 3
+
+console.log("\n  Test for: Filtering words by their length [for loop]");
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", 
+    "elephant"], 5)); // [ 'giraffe', 'hippo', 'elephant' ]
