@@ -29,6 +29,15 @@ function canDrive(name, age) {
   return `${name} is not old enough to drive`;
 }
 
+// Challenge 6: Largest Number
+function findLargest(num1, num2, num3){
+  let largest = num1, arr =[num2, num3];
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] > largest) largest = arr[i];
+  }
+  return largest 
+}
+
 // Challenge 7: BMI Calculator
 function calculateBMI(weight, height) {
   const BMI = Math.trunc((weight / (height * height)) * 10) / 10;
@@ -186,6 +195,10 @@ console.log("\nTest for checking whether User can Drive based on age");
 console.log(canDrive("Mwas", 34)); // Mwas is old enough to drive
 console.log(canDrive("John", 18)); // 'John is old enough to drive'
 console.log(canDrive("Elian", 17)); // 'Elian is not old enough to drive'
+
+console.log(findLargest(5, 9, 3)); // 9
+console.log(findLargest(10, 10, 10)); // 10
+console.log(findLargest(-1, -5, -3)); // -1
 
 console.log("\nTest for calculating BMI value");
 console.log(calculateBMI(68, 1.75)); // 'Your BMI is 22.2 - Normal weight'
