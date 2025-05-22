@@ -37,6 +37,11 @@ function findLongestWord(wordArray) {
   return longestWord;
 }
 
+// Challenge 5: Count Properties
+function countObjProps(obj) {
+  return Object.keys(obj).length;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -62,3 +67,6 @@ console.log(findWinner(candidates)); //[{ name: 'Bob', votes: 75 }, { name: "Kim
 
 console.log("\n  Test to: Find the Longest Word in an array of Strings");
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // grapefruit
+
+console.log("\n  Test for: Counting Properties in an object");
+console.log(countObjProps({ name: "Alice", age: 25, city: "Paris" })); // 3
