@@ -122,6 +122,15 @@ function reverseLinearSearch(arr, target) {
   return idx ? idx : -1;
 }
 
+// Challenge 13: Linear Search All Indices
+function linearSearchAll(arr, target) {
+  let foundAt = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) foundAt.push(i);
+  }
+  return foundAt;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -194,3 +203,9 @@ console.log(
 );
 console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)); // 5
 console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // -1
+
+console.log(
+  "\n  Test for: Linear Search & return array of indices of all occurrences of the target"
+);
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7)); // [2, 5]
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10)); // []
