@@ -92,6 +92,16 @@ function getAvg(numArray) {
   return numArray.reduce((a, b) => a + b) / numArray.length;
 }
 
+// Approach Two (no inbuilt func)
+function findAvg(numArray) {
+  if (numArray.length === 0) return 0;
+  let sum = 0;
+  for (let i = 0; i < numArray.length; i++) {
+    sum += numArray[i];
+  }
+  return sum / numArray.length;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -148,3 +158,9 @@ console.log(
 );
 console.log(getAvg([2, 3, 4, 6, 7, 5])); // 4.5
 console.log(getAvg([])); // 0
+
+console.log(
+  "\n  Test for Finding Average of array-values in a numberArray [for loop]"
+);
+console.log(findAvg([2, 3, 4, 6, 7, 5])); // 4.5
+console.log(findAvg([])); // 0
