@@ -76,6 +76,15 @@ function diffEvenOdd(numArray) {
   return sumEven - sumOdd;
 }
 
+// Challenge 9: Count Truthy
+function countTruthy(obj) {
+  let truthyCount = 0;
+  for (let value of Object.values(obj)) {
+    if (value) truthyCount++;
+  }
+  return truthyCount;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -123,3 +132,6 @@ console.log(
   "\n     Test to find: Difference Between Sum of Even and Odd Numbers in an array of numbers"
 );
 console.log(diffEvenOdd([1, 2, 3, 4, 5, 6])); // 3
+
+console.log("\n     Test for: Counting the Truthy values in an Array");
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // 2
