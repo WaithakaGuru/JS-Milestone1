@@ -16,6 +16,18 @@ const findMax = (numArray) => {
   return max;
 };
 
+// Challenge 3: Election winner
+function findWinner(objArray) {
+  let winner = [objArray[0]];
+  for (let i = 1; i < objArray.length; i++) {
+    if (objArray[i]["votes"] > winner[0]["votes"]) {
+      winner[0] = objArray[i];
+    } else if (objArray[i]["votes"] === winner[0]["votes"])
+      winner.push(objArray[i]);
+  }
+  return winner;
+}
+
 /* Testing Area */
 console.log("\n  Test for Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -28,3 +40,6 @@ console.log(findMax([1, 3, 4, 55, 6, 77, 34, 123, -2])); // 123
 console.log(findMax([0, 0, 0])); // 0
 console.log(findMax([-45, -56, -1, -2])); // -1
 
+console.log(
+  "\n  Test for [findWinner]: Finding the Object with the Highest value in an array of objects"
+);
