@@ -9,10 +9,11 @@
 - __An ordered learning procedure__ from the basics of JS to Functions and Scope and other Advanced concepts 
 ---
 
-## Contributing to this Learning Repo
-## 🤝 Contributing
+## 🤝 Contributing to this Learning Repo
 
-Contributions are welcome! If you'd like to help improve this project, please follow these steps:
+
+Contributions are welcome! If you'd like to help improve this project, 
+### Please follow these steps:
 
 1. **Fork** the repository.
 1. **Clone** your forked copy of the project:
