@@ -113,13 +113,10 @@ function linearSearch(arr, target) {
 
 // challenge 12: Reverse Linear Search
 function reverseLinearSearch(arr, target) {
-  let idx;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      idx = i;
-    }
+  for (let i = arr.length; i >= 0; i--) {
+    if (arr[i] === target) return i
   }
-  return idx ? idx : -1;
+  return -1;
 }
 
 // Challenge 13: Linear Search All Indices
@@ -143,19 +140,18 @@ function countOccurrences(stringArray) {
 
 // Challenge 15: Remove Duplicates
 function removeDuplicates(arr) {
-  let cleanArr = {};
+  let cleanArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (!cleanArr[arr[i]]) cleanArr[arr[i]] = arr[i];
+    if (!cleanArr.includes(arr[i])) cleanArr.push(arr[i]);
   }
-  return Object.values(cleanArr);
+  return cleanArr;
 }
 
 // Challenge 16: Most Frequent 
 function mostFrequent(arr){
     let frequencyObj = {};
     for(let i = 0; i<arr.length; i++){
-        if(!frequencyObj[arr[i]]) frequencyObj[arr[i]] = 1;
-        else frequencyObj[arr[i]] += 1;
+        frequencyObj[arr[i]] = (frequencyObj[arr[i]] || 0) + 1;
     }
     let mostFrequent = Object.keys(frequencyObj)[0];
     for(const key of Object.keys(frequencyObj)){
@@ -212,7 +208,7 @@ console.log(
 );
 console.log(diffEvenOdd([1, 2, 3, 4, 5, 6])); // 3
 
-console.log("\n     Test for: Counting the Truthy values in an Array");
+console.log("\n  Test for: Counting the Truthy values in an Array");
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // 2
 
 console.log(
@@ -252,6 +248,7 @@ console.log(
   "\n  Test for Removing Duplicate values in an array & return Non-Duplicate array"
 );
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // [ 1, 2, 3, 4, 5 ]
+console.log(removeDuplicates([1, 2, 4, 1, 5, 3, 2])); // [ 1, 2, 4, 5, 3 ]
 
 console.log("\n  Testing for Finding the most frequent item in an Array");
 console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4])); // 3
