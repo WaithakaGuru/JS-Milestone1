@@ -1,6 +1,16 @@
 # Javascript Milestones Coding challenges
 ---
 
+**Table of Contents:**
+ - [About this Repo](#what-this-repo-entails)
+ - [Topics Covered](#topics-covered)
+    - [Javascript Basic](#in-milestone_1_challenges)
+    - [Intermediate Javascript](#in-milestone_2_challenges)
+- [Contributions](#-contributing-to-this-learning-repo)
+    - [Contribution steps](#please-follow-these-steps)
+    - [Contribution Guidelines](#guidelines)
+ 
+
 ## What this repo entails
 
 - __Code solutions to Javascript coding challenges__ - from basic to Advanced
@@ -8,12 +18,26 @@
 - __Test cases__ for the coding solutions
 - __An ordered learning procedure__ from the basics of JS to Functions and Scope and other Advanced concepts 
 ---
+## Topics covered 
++ ### In milestone_1_challenges 
+
+    + __Variables__ - declaration and use
+    + JS __Datatypes__ 
+    +__Functions__ in javascript - arrow func, normal func e.t.c
+    + The Concept of ___Scope___ in JavaScript 
+
++ ### In milestone_2_challenges
+
+    - __Data Structures__ in Js
+    - __Objects__ - Declaration, use, traversing and Object methods 
+    - __Arrays__ - Declaration, use, traversing, Search and Array methods 
+---
 
 ## 🤝 Contributing to this Learning Repo
 
 
 Contributions are welcome! If you'd like to help improve this project, 
-### Please follow these steps:
+   ### Please follow these steps:
 
 1. **Fork** the repository.
 1. **Clone** your forked copy of the project:
@@ -44,19 +68,4 @@ Contributions are welcome! If you'd like to help improve this project,
 
     _Please ensure your code follows the project's coding conventions and includes relevant documentation and tests.
 __Thanks for contributing! 🙌___
----
-## Topics covered 
-+ In milestone_1_challenges 
-
-    + __Variables__ - declaration and use
-    + JS __Datatypes__ 
-    +__Functions__ in javascript - arrow func, normal func e.t.c
-    + The Concept of ___Scope___ in JavaScript 
-
-
-+ In milestone_2_challenges
-
-    - __Data Structures__ in Js
-    - __Objects__ - Declaration, use, traversing and Object methods 
-    - __Arrays__ - Declaration, use, traversing, Search and Array methods 
 ---
